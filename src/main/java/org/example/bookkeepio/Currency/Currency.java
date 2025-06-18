@@ -14,9 +14,13 @@ import org.example.bookkeepio.library.AbstractEntity;
 @AllArgsConstructor
 public class Currency extends AbstractEntity {
 
-    @Column(nullable = false, unique = true)
-    private String code; // TRY, USD, EUR
+    // bu sınıf sistemde kullanılacak para birimlerini tanımlar
 
+    // Para birimi kodu (örnek: TRY, USD)
+    @Column(nullable = false, unique = true)
+    private String code;
+
+    // Para biriminin tam adı
     @Column(nullable = false)
     private String name;
 }
